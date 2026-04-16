@@ -9,133 +9,64 @@ body {
 }
 
 /* Encabezados */
-h1, h2, h3 {
+h1, h2 {
     color: #003366;
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-/* Párrafos */
-p {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    color: #555;
+/* Contenedor de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Contenedor principal */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+/* Tarjetas de productos */
+.product-card {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Listas de productos */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 15px 0;
-    padding: 15px;
-    background: #e9f5ff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-ul li strong {
-    font-size: 1.2rem;
+.product-card strong {
+    font-size: 1.5rem;
     color: #003366;
+    margin-bottom: 10px;
 }
 
-ul li p {
+.product-card p {
     font-size: 1rem;
     color: #555;
+    margin: 5px 0;
 }
 
-/* Botones */
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+/* Efecto hover en las tarjetas */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-/* Enlaces */
-a {
-    color: #007BFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px 0;
-    background-color: #003366;
-    color: white;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-/* Estilo para dispositivos pequeños */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
+    .product-card {
         padding: 15px;
     }
 
-    h1, h2, h3 {
-        font-size: 1.5rem;
+    .product-card strong {
+        font-size: 1.3rem;
     }
 
-    ul li {
-        padding: 10px;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    h1, h2, h3 {
-        font-size: 1.2rem;
-    }
-
-    ul li {
-        padding: 8px;
-    }
-
-    p {
+    .product-card p {
         font-size: 0.9rem;
     }
 }

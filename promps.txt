@@ -5,3 +5,13 @@ me ayudo a dar un diseño basico al sitio web
 segundo promp:
 dale un diseño pensado en la tienda
 me ayudo a cambiar a un diseño mas trabajado para el sitio
+
+3 promp:
+me ayudas a ordenarlos para que esten 
+a lado del otro como en cuadrados y 
+dentro informacion
+me ayudo a reorganizar los productos
+
+4 promp:
+agregar 2-3 atributos tecnicos
+me ayudo a agregar los atributos tecnicos en lista
